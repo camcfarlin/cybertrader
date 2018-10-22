@@ -4,15 +4,33 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node":"10.8.0",
+    "node": "10.8.0",
     "npm": "6.2.0"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
-  }
+    "concurrently": "^4.0.1",
+    "cookie-session": "^2.0.0-beta.2",
+    "express": "^4.16.4",
+    "mongoose": "^4.11.1",
+    "nodemon": "^1.18.4",
+    "passport": "^0.3.2",
+    "passport-google-auth20": "^1.0.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camcfarlin/papertrading.git"
+  },
+  "bugs": {
+    "url": "https://github.com/camcfarlin/papertrading/issues"
+  },
+  "homepage": "https://github.com/camcfarlin/papertrading#readme"
 }
