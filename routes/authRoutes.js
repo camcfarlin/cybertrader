@@ -6,9 +6,10 @@ module.exports = app => {
     '/auth/google',
     passport.authenticate ('google', {
       // asking google to utlise authorization v profile/email scopes built in
-      scope: ['profile', 'email'],
+      scope: ['profile', 'email', 'https://www.googleapis.com/auth/plus.login'],
     })
   );
+
   //second route handler w/ code auth to xchange for info - returns accessToken
   app.get ('/auth/google/callback', passport.authenticate ('google'));
 
