@@ -3,7 +3,7 @@ const app = express();
 
 //Route handler 
 app.get('/', (req, res) => {
-    res.send({buy:'buddy'});
+    res.send({buy:'Test'});
 });
 
 //Dynamic production Env (Heroku) or developement emv
