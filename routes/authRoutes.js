@@ -10,7 +10,13 @@ module.exports = app => {
     })
   );
   //second route handler w/ code auth to xchange for info - returns accessToken
-  app.get ('/auth/google/callback', passport.authenticate ('google'));
+  app.get (
+    '/auth/google/callback', 
+    passport.authenticate ('google'),
+    (req, res) => {
+      res.redirect('/portfolio');
+    }
+    );
 
   // if signedon user goes to following route -lg out
   app.get ('/api/logout', (req, res) => {
