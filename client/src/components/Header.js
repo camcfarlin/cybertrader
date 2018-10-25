@@ -23,7 +23,8 @@ class Header extends Component {
               </a>
               <a class="nav-item nav-link" href="#">About Us</a>
               <a class="nav-item nav-link" href="#">Tutorial</a>
-              <a class="nav-item nav-link" href="#">Log in With Google</a>
+              <a class="nav-item nav-link" href="http://localhost:5000/auth/google">Log in With Google</a>
+              {/* href temporary ^ */}
               {/* add to class - disabled */}
             </div>
           </div>
