@@ -58,7 +58,7 @@ class Search extends Component {
   }
 
   render () {
-    let stocks = this.state.stocks;
+    // let stocks = this.state.stocks;
     const value = this.state.value;
 
     return (

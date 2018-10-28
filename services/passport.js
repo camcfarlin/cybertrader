@@ -36,14 +36,14 @@ passport.use (
   )
 );
 
-const fetchAlbums = async () => {
-  const res = await fetch (
-    'https://rallycoding.herokuapp.com/api/music_albums'
-  );
-  const json = await res.json ();
-  console.log (json);
-};
-fetchAlbums ();
+// const fetchAlbums = async () => {
+//   const res = await fetch (
+//     'https://rallycoding.herokuapp.com/api/music_albums'
+//   );
+//   const json = await res.json ();
+//   console.log (json);
+// };
+// fetchAlbums ();
 
 // refactor of line 28-36
 // (accessToken, refreshToken, profile, done) => {

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
-import {Navbar, Nav, NavItem,NavDropdown,MenuItem} from 'react-bootstrap';
+import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
 
 class Header extends Component {
   renderContent () {
@@ -10,51 +10,51 @@ class Header extends Component {
         return;
       case false:
         return (
-          <a className="nav-item nav-link" href="/auth/google">
+          <NavItem eventKey={1} href="/auth/google">
             Login with Google
-          </a>
+          </NavItem>
         );
       default:
-        return <a className="nav-item nav-link" href="/api/logout">Logout</a>;
+        return <NavItem eventKey={2} href="/api/logout">Logout</NavItem>;
     }
-  } 
-    render () {
+  }
+  render () {
     // console.log(this.props);
     return (
       <Navbar inverse collapseOnSelect>
-      <Navbar.Header>
-        <Navbar.Brand>
-        <Link to={this.props.auth ? '/portfolio': '/'}
-            className="navbar-brand" href="/"
+        <Navbar.Header>
+          <Navbar.Brand>
+            <Link
+              to={this.props.auth ? '/portfolio' : '/'}
+              className="navbar-brand"
+              href="/"
             >
-            CyberTrader
+              CyberTrader
             </Link>
-        </Navbar.Brand>
-        <Navbar.Toggle />
-      </Navbar.Header>
-      <Navbar.Collapse>
-        <Nav>
-          <NavItem eventKey={1} href="#">
-            Link
-          </NavItem>
-          <NavItem eventKey={2} href="#">
-            Link
-          </NavItem>
-          <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-            <MenuItem eventKey={3.1}>Action</MenuItem>
-            <MenuItem eventKey={3.2}>Another action</MenuItem>
-            <MenuItem eventKey={3.3}>Something else here</MenuItem>
-            <MenuItem divider />
-            <MenuItem eventKey={3.3}>Separated link</MenuItem>
-          </NavDropdown>
-        </Nav>
-        <Nav pullRight>
-          <NavItem eventKey={1} href="#">
-          {this.renderContent ()}
-          </NavItem>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+          </Navbar.Brand>
+          <Navbar.Toggle />
+        </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav>
+            <NavItem eventKey={1} href="#">
+              About
+            </NavItem>
+            <NavItem eventKey={2} href="/search">
+              Search
+            </NavItem>
+            <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+              <MenuItem eventKey={3.1}>Action</MenuItem>
+              <MenuItem eventKey={3.2}>Another action</MenuItem>
+              <MenuItem eventKey={3.3}>Something else here</MenuItem>
+              <MenuItem divider />
+              <MenuItem eventKey={3.3}>Separated link</MenuItem>
+            </NavDropdown>
+          </Nav>
+          <Nav pullRight>
+            {this.renderContent ()}
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     );
   }
 }
@@ -63,36 +63,32 @@ function mapStateToProps({auth}) {
 }
 export default connect (mapStateToProps) (Header);
 
+// return (
+//   <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+//   <Link to={this.props.auth ? '/portfolio': '/'}
+//     className="navbar-brand" href="/"
+//     >
+//     CyberTrader
+//     </Link>
+//     <button  className="navbar-toggler"
+//       type="button"
+//       data-toggle="collapse"
+//       data-target="#navbarNavAltMarkup"
+//       aria-controls="navbarNavAltMarkup"
+//       aria-expanded="false"
+//       aria-label="Toggle navigation"
+//     >
+//       <span className="navbar-toggler-icon" />
+//     </button>
+//     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+//       <div className="navbar-nav">
+//         <a className="nav-item nav-link active" href="#">
+//           Home <span className="sr-only">(current)</span>
+//         </a>
+//         <a className="nav-item nav-link" href="#">About Us</a>
 
+//         {this.renderContent ()}
 
-
-{/* <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">      
-<Link to={this.props.auth ? '/portfolio': '/'}
-  className="navbar-brand" href="/"
-  >
-  CyberTrader
-  </Link>
-  <button  className="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarNavAltMarkup"
-    aria-controls="navbarNavAltMarkup"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span className="navbar-toggler-icon" />
-  </button>
-  <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div className="navbar-nav">
-      <a className="nav-item nav-link active" href="#">
-        Home <span className="sr-only">(current)</span>
-      </a>
-      <a className="nav-item nav-link" href="#">About Us</a>
-
-      
-
-      {/* href temporary ^ */}
-      {/* add to className - disabled */}
+//       </div>
 //     </div>
-//   </div>
-// </nav> */}
+//   </nav>
