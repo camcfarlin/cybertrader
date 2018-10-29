@@ -10,12 +10,12 @@ class Header extends Component {
         return;
       case false:
         return (
-          <NavItem eventKey={1} href="/auth/google">
+          <NavItem href="/auth/google">
             Login with Google
           </NavItem>
         );
       default:
-        return <NavItem eventKey={2} href="/api/logout">Logout</NavItem>;
+        return <NavItem href="/api/logout">Logout</NavItem>;
     }
   }
   render () {
@@ -50,14 +50,15 @@ class Header extends Component {
               <MenuItem eventKey={3.3}>Separated link</MenuItem>
             </NavDropdown>
           </Nav>
-          <Nav pullRight>
-            {this.renderContent ()}
-          </Nav>
+
+          {this.renderContent ()}
+
         </Navbar.Collapse>
       </Navbar>
     );
   }
 }
+
 function mapStateToProps({auth}) {
   return {auth};
 }
