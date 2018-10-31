@@ -6,6 +6,8 @@ import * as actions from '../actions';
 import Header from './Header';
 import Landing from './Landing';
 import Search from './SearchWidget/Search';
+// import Avatar from './Profile';
+
 const Dashboard = () => <h2>Dashboard</h2>;
 const NewTrade = () => <h2>Trade</h2>;
 
@@ -24,6 +26,7 @@ class App extends Component {
             <Route exact path="/portfolio" component={Dashboard} />
             <Route path="/portfolio/trade" component={NewTrade} />
             <Route path="/search" component={Search} />
+            {/* <Route path="/profile" component={Avatar} /> */}
           </div>
         </BrowserRouter>
       </div>
