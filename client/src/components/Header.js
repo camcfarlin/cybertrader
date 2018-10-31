@@ -27,7 +27,7 @@ class Header extends Component {
             <Link
               to={this.props.auth ? '/portfolio' : '/'}
               className="navbar-brand"
-              href="/"
+              // href="/"
             >
               CyberTrader
             </Link>

@@ -38,7 +38,7 @@ passport.use (
 
 // const fetchAlbums = async () => {
 //   const res = await fetch (
-//     'https://rallycoding.herokuapp.com/api/music_albums'
+//     "https://rallycoding.herokuapp.com/api/music_albums"
 //   );
 //   const json = await res.json ();
 //   console.log (json);
@@ -58,15 +58,14 @@ passport.use (
 //         .then (user => done (null, user));
 //     }})
 
- 
 // Test - pull from google Auth
-// console.log ('access token', accessToken);
-// console.log ('refresh token', refreshToken);
-// console.log ('profile:', profile);
+// console.log ("access token", accessToken);
+// console.log ("refresh token", refreshToken);
+// console.log ("profile:", profile);
 
 // //fetch - return response object to return promise -line 40
 // function fetchAlbums () {
-//   fetch ('https://rallycoding.herokuapp.com/api/music_albums')
+//   fetch ("https://rallycoding.herokuapp.com/api/music_albums")
 //     .then (res => res.json ())
 //     //fetch resolves the promise with an object
 //     .then (json => console.log (json));
