@@ -15,7 +15,7 @@ class Header extends Component {
           </NavItem>
         );
       default:
-        return <NavItem href="/api/logout">Logout</NavItem>;
+        return <NavItem eventKey={1} href="/api/logout">Logout</NavItem>;
     }
   }
   render () {
@@ -50,9 +50,9 @@ class Header extends Component {
               <MenuItem eventKey={3.3}>Separated link</MenuItem>
             </NavDropdown>
           </Nav>
-
-          {this.renderContent ()}
-
+          <Nav pullRight>
+            {this.renderContent()}
+          </Nav>
         </Navbar.Collapse>
       </Navbar>
     );
