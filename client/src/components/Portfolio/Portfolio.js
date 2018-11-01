@@ -14,26 +14,35 @@ const Portfolio = props => {
                         <th>Change</th>
                         <th>High</th>
                         <th>Low</th>
-                        <th>Unwatch</th>
+                        <th>toggle</th>
                     </tr>
                 </thead>
                 <tbody>
                 <tr>
                         <th>BAC</th>
-                        <th>10.20</th>
-                        <th>10.19</th>
-                        <th>10%</th>
-                        <th>10.21</th>
-                        <th>10.18</th>
+                        <th>20.20</th>
+                        <th>20.19</th>
+                        <th>4.3%</th>
+                        <th>20.21</th>
+                        <th>20.18</th>
                         <th>Unwatch</th>
                     </tr>
                     <tr>
                         <th>AAPL</th>
-                        <th>100.20</th>
-                        <th>120.19</th>
+                        <th>218.00</th>
+                        <th>220.19</th>
                         <th>32.3%</th>
-                        <th>100.21</th>
-                        <th>134.18</th>
+                        <th>200.21</th>
+                        <th>234.18</th>
+                        <th>Unwatch</th>
+                    </tr>
+                    <tr>
+                        <th>GOOG</th>
+                        <th>1075.49</th>
+                        <th>1032.19</th>
+                        <th>6.3%</th>
+                        <th>1084.20</th>
+                        <th>1030.2</th>
                         <th>Unwatch</th>
                     </tr>
                 </tbody>
