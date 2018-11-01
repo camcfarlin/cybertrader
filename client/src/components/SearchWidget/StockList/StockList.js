@@ -25,19 +25,3 @@ const StockList = (props) => {
 
 export default StockList;
 
-
-{/* <div className="row">
-<table className="table-hover">
-    <thead>
-        <tr>
-            <th>Symbol</th>
-            <th>Open</th>
-            <th>Last</th>
-            <th>Change</th>
-            <th>High</th>
-            <th>Low</th>
-            <th>Unwatch</th>
-        </tr>
-    </thead>
-    </table>
-    </div> */}
