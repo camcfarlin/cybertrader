@@ -1,6 +1,7 @@
 .StockList {
-  margin: 0 2.5rem;
-  padding: 0;
-  display: flex;
-  flex-flow: row wrap;
+  /* margin: 0 2.5rem; */
+  padding: 0 80px;
+  /* display: flex; */
+  /* flex-flow: row wrap; */
+  font-size: .8rem;
 }

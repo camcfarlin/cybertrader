@@ -7,6 +7,7 @@ import Landing from './Landing';
 import Search from './SearchWidget/Search';
 import Demo from './Portfolio/Portfolio';
 import Portfolio from './Portfolio/Portfolio';
+import {Grid, Col, Row} from 'react-bootstrap';
 // import Avatar from './Profile';
 
 const Dashboard = () => <h2>Dashboard</h2>;
@@ -27,8 +28,19 @@ class App extends Component {
             <Route exact path="/portfolio" component={Portfolio} />
             <Route path="/portfolio/trade" component={NewTrade} />
             <Route path="/search" component={Search} />
-            <Route path="/Demo" component={Search}/>
-            <Route path="/Demo" component={Demo} />
+            <Grid>
+      <Row className="show-grid">
+        <Col xs={6} md={4}>
+        <Route path="/Demo" component={Demo} />
+        
+        </Col>
+        <Col xs={6} md={4}>
+        <Route path="/Demo" component={Search}/>
+        </Col>
+      </Row>
+    </Grid>
+            
+            
             {/* <Route path="/profile" component={Avatar} /> */}
           </div>
         </BrowserRouter>
