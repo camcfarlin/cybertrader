@@ -27,6 +27,15 @@ const Portfolio = props => {
                         <th>10.18</th>
                         <th>Unwatch</th>
                     </tr>
+                    <tr>
+                        <th>AAPL</th>
+                        <th>100.20</th>
+                        <th>120.19</th>
+                        <th>32.3%</th>
+                        <th>100.21</th>
+                        <th>134.18</th>
+                        <th>Unwatch</th>
+                    </tr>
                 </tbody>
             </table>
             </div>
