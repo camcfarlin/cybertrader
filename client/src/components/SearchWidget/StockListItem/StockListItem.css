@@ -21,17 +21,19 @@
 @media only screen and (min-width: 1024px) {
   .StockListItem {
    flex: 0 0 24%;
+   float: right;
   }
 }
 
 .StockListItem:hover {
   background-color: #fff;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.24), 0 10px 10px rgba(0,0,0,0.20);
+  /* box-shadow: 0 14px 28px rgba(0,0,0,0.24), 0 10px 10px rgba(0,0,0,0.20); */
 }
 
 .StockListItem > * {
   letter-spacing: 1px;
   font-weight: 500;
+  
 }
 .StockListItem > * span{
   color: #757575;

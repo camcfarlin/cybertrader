@@ -1,12 +1,13 @@
 .Search {
   /* width: 100vw; */
-  height: 100vh;
+  height: 30vh;
   text-align: center;
 }
 
 .Search__Title  {
+  font: 1em sans-serif;
   letter-spacing: 2px;
-  font-weight: 300;
+  font-weight: 500;
   text-transform: uppercase;
 }
 

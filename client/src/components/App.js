@@ -2,10 +2,11 @@ import React, {Component} from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
-
 import Header from './Header';
 import Landing from './Landing';
 import Search from './SearchWidget/Search';
+import Demo from './Portfolio/Portfolio';
+import Portfolio from './Portfolio/Portfolio';
 // import Avatar from './Profile';
 
 const Dashboard = () => <h2>Dashboard</h2>;
@@ -23,9 +24,11 @@ class App extends Component {
           <div>
             <Header />
             <Route exact path="/" component={Landing} />
-            <Route exact path="/portfolio" component={Dashboard} />
+            <Route exact path="/portfolio" component={Portfolio} />
             <Route path="/portfolio/trade" component={NewTrade} />
             <Route path="/search" component={Search} />
+            <Route path="/Demo" component={Search}/>
+            <Route path="/Demo" component={Demo} />
             {/* <Route path="/profile" component={Avatar} /> */}
           </div>
         </BrowserRouter>
