@@ -8,11 +8,12 @@ import Search from './SearchWidget/Search';
 import Demo from './Portfolio/Portfolio';
 import Portfolio from './Portfolio/Portfolio';
 import {Grid, Col, Row} from 'react-bootstrap';
+import Contact from './Contact';
+import About from './About';
 // import Avatar from './Profile';
 
 const Dashboard = () => <h2>Dashboard</h2>;
 const NewTrade = () => <h2>Trade</h2>;
-
 
 class App extends Component {
   componentDidMount () {
@@ -28,19 +29,21 @@ class App extends Component {
             <Route exact path="/portfolio" component={Portfolio} />
             <Route path="/portfolio/trade" component={NewTrade} />
             <Route path="/search" component={Search} />
+            <Route path="/about" component={About} />
+            <Route path="/about" component={Contact} />
+
+            {/* // FOR DEMO PORT */}
             <Grid>
-      <Row className="show-grid">
-        <Col xs={6} md={4}>
-        <Route path="/Demo" component={Demo} />
-        
-        </Col>
-        <Col xs={6} md={4}>
-        <Route path="/Demo" component={Search}/>
-        </Col>
-      </Row>
-    </Grid>
-            
-            
+              <Row className="show-grid">
+                <Col xs={12} md={6}>
+                  <Route path="/Demo" component={Demo} />
+                </Col>
+                <Col xs={12} md={4}>
+                  <Route path="/Demo" component={Search} />
+                </Col>
+              </Row>
+            </Grid>
+
             {/* <Route path="/profile" component={Avatar} /> */}
           </div>
         </BrowserRouter>
