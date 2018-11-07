@@ -15,3 +15,15 @@ Data saved to Mlab and pulled to display on React App
 ### Looking to the Future
 
 Launch open sorce project, allow others to contrubute the the site/app. Allowing them to create their widget
+
+##  Technology Utlized
+
+- React
+- MongodDB/ Mongoose
+- Mlab
+- Google Auth 2.0
+- Redux
+- HTML 5
+- CSS 5
+- Bootstrap / ReactBootstrap
+- Postman
